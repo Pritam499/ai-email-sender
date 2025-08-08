@@ -1,12 +1,108 @@
-# React + Vite
+# 📧 AI Generated Email Sender
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An easy-to-use **AI-powered email generator** built with **OpenRouter** and the **Qwen3-Coder (Free)** model.  
+Generate, edit, and send professional emails in seconds — no backend required!
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
+- 🎯 **AI Email Drafting** – Write professional, friendly, or casual emails instantly.
+- 📜 **Multiple Tones** – Choose from professional, casual, friendly, or follow-up styles.
+- 🖊 **Editable Preview** – Review and tweak before sending.
+- 📤 **Direct Sending** – Opens your email client with the generated email.
+- ⚡ **No Backend** – All API calls are done client-side for faster response.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠 Tech Stack
+- **Frontend:** React, Vite
+- **Styling:** Tailwind CSS
+- **AI Integration:** OpenRouter API
+- **AI API:** [OpenRouter](https://openrouter.ai/v1)
+- **Model:** [`qwen/qwen3-coder:free`](https://openrouter.ai/qwen/qwen3-coder:free)
+
+---
+
+## 📦 Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/ai-email-sender.git
+   cd ai-email-sender
+Install dependencies
+If your project uses npm:
+
+bash
+Copy
+Edit
+npm install
+Create .env file
+Inside your project folder, create a .env file and add:
+
+env
+Copy
+Edit
+OPENROUTER_API_KEY=your_api_key_here
+Get your free API key
+
+Go to OpenRouter Signup
+
+Create a free account
+
+Visit the API Keys page
+
+Copy your key and paste it into .env
+
+🚀 Usage
+Run your app
+
+bash
+Copy
+Edit
+npm run dev
+
+Enter recipient email – Type or paste email addresses.
+
+Choose tone & prompt – Select from Professional, Casual, Friendly, or Follow-up and write your request.
+
+Generate Email – Click Generate Email and the AI will create a draft.
+
+Send – Review and click Send to open your default email client.
+
+🔐 Environment Variables
+Variable	Description
+OPENROUTER_API_KEY	Your OpenRouter API key
+
+⚠ Do not share your API key — keep it private.
+
+📄 Example .env
+env
+Copy
+Edit
+OPENROUTER_API_KEY=sk-or-xxxxxxxxxxxxxxxxxxxxxxxx
+📚 API Reference
+Endpoint
+
+bash
+Copy
+Edit
+POST https://openrouter.ai/api/v1/chat/completions
+Headers
+
+http
+Copy
+Edit
+Authorization: Bearer YOUR_API_KEY
+Content-Type: application/json
+Body Example
+
+json
+Copy
+Edit
+{
+  "model": "qwen/qwen3-coder:free",
+  "messages": [
+    { "role": "system", "content": "You are a helpful email assistant." },
+    { "role": "user", "content": "Write a polite follow-up email asking for a decision." }
+  ]
+}
