@@ -27,8 +27,10 @@ Generate, edit, and send professional emails in seconds — no backend required!
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/ai-email-sender.git
+   git clone https://github.com/Pritam499/ai-email-sender.git
    cd ai-email-sender
+
+   ---
 Install dependencies
 If your project uses npm:
 
