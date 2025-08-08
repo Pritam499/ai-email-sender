@@ -29,24 +29,21 @@ Generate, edit, and send professional emails in seconds — no backend required!
    ```bash
    git clone https://github.com/Pritam499/ai-email-sender.git
    cd ai-email-sender
+    ```
+## 📦 Installation
 
-   ---
-Install dependencies
-If your project uses npm:
-
-bash
-Copy
-Edit
+### Install dependencies
+If your project uses **npm**:
+```bash
 npm install
-Create .env file
+```
+### Create .env file
 Inside your project folder, create a .env file and add:
 
-env
-Copy
-Edit
+```bash
 OPENROUTER_API_KEY=your_api_key_here
-Get your free API key
-
+```
+## Get your free API key
 Go to OpenRouter Signup
 
 Create a free account
@@ -55,14 +52,13 @@ Visit the API Keys page
 
 Copy your key and paste it into .env
 
-🚀 Usage
+# 🚀 Usage
 Run your app
 
-bash
-Copy
-Edit
+```bash
 npm run dev
 
+```
 Enter recipient email – Type or paste email addresses.
 
 Choose tone & prompt – Select from Professional, Casual, Friendly, or Follow-up and write your request.
@@ -71,36 +67,26 @@ Generate Email – Click Generate Email and the AI will create a draft.
 
 Send – Review and click Send to open your default email client.
 
-🔐 Environment Variables
+# 🔐 Environment Variables
 Variable	Description
 OPENROUTER_API_KEY	Your OpenRouter API key
 
 ⚠ Do not share your API key — keep it private.
 
-📄 Example .env
-env
-Copy
-Edit
+## 📄 Example .env
+```bash
 OPENROUTER_API_KEY=sk-or-xxxxxxxxxxxxxxxxxxxxxxxx
-📚 API Reference
+```
+## 📚 API Reference
 Endpoint
-
-bash
-Copy
-Edit
+```bash
 POST https://openrouter.ai/api/v1/chat/completions
-Headers
-
-http
-Copy
-Edit
+```
+## Headers
 Authorization: Bearer YOUR_API_KEY
 Content-Type: application/json
-Body Example
-
-json
-Copy
-Edit
+## Body Example
+```bash
 {
   "model": "qwen/qwen3-coder:free",
   "messages": [
